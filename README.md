@@ -198,11 +198,7 @@ See the evaluation scripts in `eval/attention_helpers.py` for complete integrati
 
 ---
 
-## Research Use Only
 
-The code is supplied “as is” for academic research. It may rely on proprietary datasets or models that require separate licensing. Always verify you have permission to use any third-party assets referenced by the scripts.
-
----
 
 ## Citation
 
