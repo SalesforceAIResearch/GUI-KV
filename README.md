@@ -1,8 +1,16 @@
 # GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness
 
-[![arXiv](https://img.shields.io/badge/arXiv-2510.00536-b31b1b.svg)](https://arxiv.org/abs/2510.00536)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.00536-b31b1b.svg)](https://arxiv.org/abs/2510.00536) <a href='https://github.com/SalesforceAIResearch/GUI-KV/blob/main/LICENSE.txt'><img src='https://img.shields.io/badge/License-CC_NC_4.0-blue' alt='License: CC BY-NC 4.0'></a>
 
-> Research code accompanying “GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness” (Huang et al., 2025). This repository is provided to support reproducibility and further academic exploration. It is **not** a polished product and will evolve as the paper, datasets, and upstream model releases change.
+
+
+
+
+__Note: This repository is for research purposes only and not for commerical.__
+
+## Abstract
+
+Graphical user interface (GUI) agents built on vision-language models have emerged as a promising approach to automate human-computer workflows. However, they also face the inefficiency challenge as they process long sequences of high-resolution screenshots and solving long-horizon tasks, making inference slow, costly and memory-bound. While key-value (KV) caching can mitigate this, storing the full cache is prohibitive for image-heavy contexts. Existing cache-compression methods are sub-optimal as they do not account for the spatial and temporal redundancy of GUIs. In this work, we first analyze attention patterns in GUI agent workloads and find that, unlike in natural images, attention sparsity is uniformly high across all transformer layers. This insight motivates a simple uniform budget allocation strategy, which we show empirically outperforms more complex layer-varying schemes. Building on this, we introduce GUI-KV, a plug-and-play KV cache compression method for GUI agents that requires no retraining. GUI-KV combines two novel techniques: (i) spatial saliency guidance, which augments attention scores with the L2 norm of hidden states to better preserve semantically important visual tokens, and (ii) temporal redundancy scoring, which projects previous frames' keys onto the current frame's key subspace to preferentially prune redundant history. Across standard GUI agent benchmarks and models, GUI-KV outperforms competitive KV compression baselines, closely matching full-cache accuracy at modest budgets. Notably, in a 5-screenshot setting on the AgentNetBench benchmark, GUI-KV reduces decoding FLOPs by 38.9% while increasing step accuracy by 4.1% over the full-cache baseline. These results demonstrate that exploiting GUI-specific redundancies enables efficient and reliable agent performance.
 
 ---
 
@@ -22,16 +30,6 @@ GUI-KV_GH/
 
 ---
 
-## GUI-KV in Brief
-
-- Plug-and-play cache compression that works with existing vision-language GUI agents without retraining.
-- Spatial awareness keeps salient regions via hidden-state importance scores.
-- Temporal consolidation removes redundant history by projecting past frames onto current key subspaces.
-- Achieves substantial FLOP reductions while retaining or improving task success rates across UI automation benchmarks.
-
-See the paper for complete technical details and ablations.
-
----
 
 ## Environment Setup
 
