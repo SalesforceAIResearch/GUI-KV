@@ -130,13 +130,13 @@ You can switch models or cache methods by editing the `model_path` and `kv_cache
 
 ### Available Benchmarks
 
-| Shell script | Benchmark | Default model | Required environment variables |
-|--------------|-----------|---------------|--------------------------------|
-| `eval/agentnetbench_eval.sh` | AgentNetBench | `ByteDance-Seed/UI-TARS-1.5-7B` | `AGENTNETBENCH_IMGS`, `AGENTNETBENCH_DATA` |
-| `eval/androidcontrol_eval.sh` | AndroidControl | `ByteDance-Seed/UI-TARS-1.5-7B` | `ANDROIDCONTROL_IMGS`, `ANDROIDCONTROL_TEST` |
-| `eval/multimodal_mind2web_eval.sh` | Multimodal Mind2Web | `ByteDance-Seed/UI-TARS-1.5-7B` | `MM_MIND2WEB_IMGS`, `MM_MIND2WEB_TEST` |
-| `eval/screenspotv2_eval.sh` | ScreenSpot v2 | `ByteDance-Seed/UI-TARS-1.5-7B` | `SCREENSPOT_IMGS`, `SCREENSPOT_TEST` |
-| `eval/screenspotpro_eval.sh` | ScreenSpot Pro | `ByteDance-Seed/UI-TARS-1.5-7B` | `SCREENSPOTPRO_IMGS`, `SCREENSPOTPRO_TEST` |
+| Shell script | Benchmark | Required environment variables |
+|--------------|-----------|--------------------------------|
+| `eval/agentnetbench_eval.sh` | AgentNetBench | `AGENTNETBENCH_IMGS`, `AGENTNETBENCH_DATA` |
+| `eval/androidcontrol_eval.sh` | AndroidControl | `ANDROIDCONTROL_IMGS`, `ANDROIDCONTROL_TEST` |
+| `eval/multimodal_mind2web_eval.sh` | Multimodal Mind2Web | `MM_MIND2WEB_IMGS`, `MM_MIND2WEB_TEST` |
+| `eval/screenspotv2_eval.sh` | ScreenSpot v2 | `SCREENSPOT_IMGS`, `SCREENSPOT_TEST` |
+| `eval/screenspotpro_eval.sh` | ScreenSpot Pro | `SCREENSPOTPRO_IMGS`, `SCREENSPOTPRO_TEST` |
 
 ### Step-by-step
 
